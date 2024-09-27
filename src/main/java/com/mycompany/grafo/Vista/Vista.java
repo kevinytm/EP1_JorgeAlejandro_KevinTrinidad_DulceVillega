@@ -1,6 +1,7 @@
 package com.mycompany.grafo.Vista;
 
 import com.mycompany.grafo.Controlador.Archivo;
+import com.mycompany.grafo.Controlador.LeerArchivo;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -10,6 +11,12 @@ public class Vista {
     
     
     public void recopilarInformacion(){
+        
+        //Leer Archivo
+        /*LeerArchivo la = new LeerArchivo();
+        la.leerArchivoVertices();
+        la.leerArchivoVertices();*/
+        
         //Nùmero de nodos y los nombres
         int numNodos= getNumNodos();
         List<String> nombres = new ArrayList<>();
@@ -22,7 +29,7 @@ public class Vista {
         //Salvar la información
         Archivo arc = new Archivo();
         arc.guardarArchivo(nombres);
-        arc.guardarArchivo(adyacencias);
+        arc.guardarArchivoAdyacencias(adyacencias);
         
         
     }

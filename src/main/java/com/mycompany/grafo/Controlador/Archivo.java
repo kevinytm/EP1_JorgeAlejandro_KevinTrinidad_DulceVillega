@@ -28,7 +28,9 @@ public class Archivo {
             FileWriter fw = new FileWriter(file,true);  
             for(String nombre:nombres){
                 fw.append(nombre);
-                fw.append(";");
+                if(!nombre.equals(nombres.getLast())){
+                    fw.append(";");
+                }
             }
             fw.append("\n");
             fw.close();
@@ -36,5 +38,19 @@ public class Archivo {
             System.out.println("Error: "+ex);
         }
 
-    }    
+    }
+
+    public void guardarArchivoAdyacencias(List<String> adyacencias){
+        try{
+            File file = new File("archivo.graph");
+            FileWriter fw = new FileWriter(file,true);  
+            for(String adyacencia:adyacencias){
+                fw.append(adyacencia); 
+                fw.append("\n");
+            }
+            fw.close();
+        }catch(IOException ex){
+            System.out.println("Error: "+ex);
+        }        
+    }
 }
