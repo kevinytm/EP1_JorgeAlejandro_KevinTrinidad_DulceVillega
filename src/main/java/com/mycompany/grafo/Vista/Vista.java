@@ -13,9 +13,9 @@ public class Vista {
     public void recopilarInformacion(){
         
         //Leer Archivo
-        /*LeerArchivo la = new LeerArchivo();
+        LeerArchivo la = new LeerArchivo();
         la.leerArchivoVertices();
-        la.leerArchivoVertices();*/
+        la.leerArchivoVertices();
         
         //Nùmero de nodos y los nombres
         int numNodos= getNumNodos();
